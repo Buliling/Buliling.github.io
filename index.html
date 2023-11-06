@@ -73,6 +73,62 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-scanf" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/06/scanf/" class="article-date">
+  <time class="dt-published" datetime="2023-11-06T04:33:15.512Z" itemprop="datePublished">2023-11-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="scanf函数"><a href="#scanf函数" class="headerlink" title="#scanf函数"></a>#scanf函数</h1><p>今天理解了一下关于scanf函数内含空格，输入输出的一个小知识点</p>
+<p><strong>一.两个整型数据之间出现空格：</strong></p>
+<p><em><u>不管有无空格，输出均无空格：</u></em></p>
+<p>1.有空格：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scanf(&quot;%d %d&quot;,&amp;a,&amp;b);</span><br></pre></td></tr></table></figure>
+
+<p>输入1____a,则输出1a。</p>
+<p>2.无空格：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scanf(&quot;%d%d&quot;,&amp;a,&amp;b);</span><br></pre></td></tr></table></figure>
+
+<p>输入1a，则输出1a</p>
+<p><strong>二.整形数据和字符型数据间出现空格：</strong></p>
+<p><u><em>输入里的空格</em>，都会被过滤掉，但空格其实占了一字符；</u></p>
+<p><em><u>scanf里的空格，输入啥就输出啥；</u></em></p>
+<p><u><em>若无空格，输入啥就输出啥</em></u></p>
+<p>1.无空格：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int a;</span><br><span class="line">char b;</span><br><span class="line">scanf(&quot;%d%c&quot;,&amp;a,&amp;b);</span><br></pre></td></tr></table></figure>
+
+<p>输入1a,则输出1a。</p>
+<p>2.输入里的空格：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int a;</span><br><span class="line">char b;</span><br><span class="line">scanf(&quot;%d %c&quot;,&amp;a,&amp;b);</span><br></pre></td></tr></table></figure>
+
+<p>输入1_a（一个空格）,则输出1（其实隐含了一个空格，没显示出来，就显示了1）</p>
+<p>3.scanf里的空格：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int a;</span><br><span class="line">char b;</span><br><span class="line">scanf(&quot;%d %c&quot;,&amp;a,&amp;b);</span><br></pre></td></tr></table></figure>
+
+<p>输入1a,则输出1a。</p>
+<p>输入1_a（一个空格），则输出1a。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/06/scanf/" data-id="clomfxt1r0000uwul5t382wsy" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-hexo and articles" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/11/04/hexo%20and%20articles/" class="article-date">
@@ -367,6 +423,10 @@
       <ul>
         
           <li>
+            <a href="/2023/11/06/scanf/">(no title)</a>
+          </li>
+        
+          <li>
             <a href="/2023/11/04/hexo%20and%20articles/">(no title)</a>
           </li>
         
@@ -380,10 +440,6 @@
         
           <li>
             <a href="/2023/11/02/my-first-blog/">我的第一篇博客</a>
-          </li>
-        
-          <li>
-            <a href="/2023/10/31/hello-world/">Hello World</a>
           </li>
         
       </ul>
