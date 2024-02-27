@@ -28,7 +28,70 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Hello Stun</div><div class="header-banner-info__subtitle">An elegant theme for Hexo</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2024/02/27/WP/">[ Untitled ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2024-02-27</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2024-02-27</span></span></div></header><div class="post-body"><div class="post-excerpt">
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Hello Stun</div><div class="header-banner-info__subtitle">An elegant theme for Hexo</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2024/02/27/WP-tupian/">WP(tupian)</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2024-02-27</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2024-02-27</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="实操解题WP"   >
+          <a href="#实操解题WP" class="heading-link"><i class="fas fa-link"></i></a><a href="#实操解题WP" class="headerlink" title="实操解题WP"></a>实操解题WP</h1>
+      
+        <h2 id="一、基础题目思路："   >
+          <a href="#一、基础题目思路：" class="heading-link"><i class="fas fa-link"></i></a><a href="#一、基础题目思路：" class="headerlink" title="一、基础题目思路："></a>一、基础题目思路：</h2>
+      <p>1.查看源代码看是否隐藏什么内容</p>
+<p>2.按F12键 ：①点击查看器 查看是否隐藏什么内容</p>
+<p>​                      ②点击网络，查看网络状态</p>
+<p>3.使用bp工具：<strong>Repeater模块</strong></p>
+<p>​                           ①添加Referer（请求的根源来自哪里）: (这里有空格要注意！)</p>
+<p>​                           ②添加X-Forworded-For（伪造IP）：127.0.0.1</p>
+<p>​                           ③修改User-agent内容</p>
+<p>​                           ④修改请求命令，如GET&#x2F;POST等</p>
+<p>​                           <strong>Intruder模块（爆破，需要字典</strong>）</p>
+<p>4.爆破不了的话，想到信息扫描之类的，扫描目录，用dirsearch工具</p>
+<p>5.涉及到账号密码登陆的，可以先想到弱口令（admin&#x2F;123456）、万能密码、爆破</p>
+
+        <h2 id="二、题解："   >
+          <a href="#二、题解：" class="heading-link"><i class="fas fa-link"></i></a><a href="#二、题解：" class="headerlink" title="二、题解："></a>二、题解：</h2>
+      <p>1.第一题：按F12点击网络查看302状态，即可获取flag</p>
+<p><img src="/imgs/1.png"></p>
+<p>​                            </p>
+<p>2.第二题：按F12点击网络查看202状态，即可获取flag</p>
+<p><img src="/imgs/2.png"></p>
+<p>3.第三题：①由题目可知，用bp添加XFF伪造IP获取提示信息</p>
+<p><img src="/imgs/3.png"></p>
+<p><img src="/imgs/4.png"></p>
+<p>②提示信息变成“必须从Home Page跳转”，所以添加请求源Referer，即可获取flag</p>
+<p><img src="/imgs/5.png"></p>
+<p>4.第四题：①访问题目只看到一个 Hello world！</p>
+<p><img src="/imgs/6.png"></p>
+<p>查看网络状态、源代码均无收获，所以想到用目录扫描，使用dirsearch工具进行扫描</p>
+<p><img src="/imgs/7.png"></p>
+<p>②发现扫描到一个<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="http://www.zip文件,尝试访问该压缩文件,解压此压缩包,获得一个flag文件,即可获取flag/" >www.zip文件，尝试访问该压缩文件，解压此压缩包，获得一个flag文件，即可获取flag</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><img src="/imgs/8.png"></p>
+<p><img src="/imgs/9.png"></p>
+<p>5.第五题：①打开题目发现方框里根本点不了</p>
+<p><img src="/imgs/10.png"></p>
+<p>②于是按F12键查看，发现maxlength&#x3D;0，且设置了disabled，所以把这两项删掉，进行抓包</p>
+<p><img src="/imgs/11.png"></p>
+<p>③发现有user，一般输admin，send后仍不能获取，于是发现cookie中user&#x3D;0，所以将其改为1，则可获取flag</p>
+<p><img src="/imgs/12.png"></p>
+<p>6.第六题：①从题目可知，要求我们从<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="http://www.yijinglab.com/%E8%BF%87%E6%9D%A5" >http://www.yijinglab.com/过来</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><img src="/imgs/13.png"></p>
+<p>②利用bp抓包添加Referer：<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="http://www.yijinglab.com/%E5%8D%B3%E5%8F%AF%E8%8E%B7%E5%8F%96" >http://www.yijinglab.com/即可获取</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><img src="/imgs/14.png"></p>
+<p>7.第七题：①题目提醒我们说要从huawei官方进入，用bp抓包</p>
+<p><img src="/imgs/15.png"></p>
+<p>②在bp中将User-agent修改为huawei即可获取flag</p>
+<p><img src="/imgs/16.png"></p>
+<p>8.第八题：①题目要求我们用HS请求</p>
+<p><img src="/imgs/17.png"></p>
+<p>②所以用bp抓包，直接将请求头改为HS即可获取flag</p>
+<p><img src="/imgs/18.png"></p>
+<p>9.第九题：①同第四题一样出现了Hello world，思路一样，使用dirsearch扫描工具</p>
+<p><img src="/imgs/19.png"></p>
+<p>②扫描后发现了admin文件，于是进行登陆打开，获取flag</p>
+<p><img src="/imgs/20.png"></p>
+<p>10.第十题：①查看第十题题目发现为一个登陆页面，要求输入账号和密码，则想到弱口令将其进行爆破</p>
+<p><img src="/imgs/21.png"></p>
+<p>②输入admin&#x2F;123456，即可获取flag</p>
+<p><img src="/imgs/22.png"></p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2024/02/27/WP/">[ Untitled ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2024-02-27</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2024-02-27</span></span></div></header><div class="post-body"><div class="post-excerpt">
         <h1 id="实操解题WP"   >
           <a href="#实操解题WP" class="heading-link"><i class="fas fa-link"></i></a><a href="#实操解题WP" class="headerlink" title="实操解题WP"></a>实操解题WP</h1>
       
@@ -333,4 +396,4 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></he
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-</div></div></article></section><nav class="paginator"><div class="paginator-inner"><span class="page-number current">1</span></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/stun-logo.svg" alt="avatar"></div><p class="sidebar-ov-author__text">Hello Stun</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">8</div><div class="sidebar-ov-state-item__name">Archives</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2024</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>John Doe</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v6.3.0</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.8.0</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.8.0"></script><script src="/js/stun-boot.js?v=2.8.0"></script><script src="/js/scroll.js?v=2.8.0"></script><script src="/js/header.js?v=2.8.0"></script><script src="/js/sidebar.js?v=2.8.0"></script></body></html>
+</div></div></article></section><nav class="paginator"><div class="paginator-inner"><span class="page-number current">1</span></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/stun-logo.svg" alt="avatar"></div><p class="sidebar-ov-author__text">Hello Stun</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">9</div><div class="sidebar-ov-state-item__name">Archives</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2024</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>John Doe</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v6.3.0</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.8.0</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.8.0"></script><script src="/js/stun-boot.js?v=2.8.0"></script><script src="/js/scroll.js?v=2.8.0"></script><script src="/js/header.js?v=2.8.0"></script><script src="/js/sidebar.js?v=2.8.0"></script></body></html>
